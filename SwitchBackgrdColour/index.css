@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 300px;
+    background-color: rgb(121, 66, 66);
+}
+
+
+button{
+    background-color: brown;
+    cursor: pointer;
+    color: white;
+    width: 150px;
+    border: none;
+    height: 50px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: large;
+    
+}
+
+button:hover{
+    background-color: blanchedalmond;
+    color: rgb(48, 10, 10);
+}
+
