@@ -1,0 +1,90 @@
+body{
+    background-color: rgb(75, 73, 73);
+    width: 800px;
+    height: 1000px;
+    color: rgb(248, 248, 248);
+    font-family: Roboto;
+    font-size: 25px;
+}
+
+.header_container{
+    display: flex;
+}
+
+li{
+    display: flex;
+}
+
+.list_container{
+    translate: 700px;
+}
+
+input{
+    margin-top: 15px;
+    translate: 1200px;
+    background-color:  rgb(54, 53, 53);
+    color: white;
+}
+.social_hand{
+    display: block;
+}
+
+.about_container{
+    display: flex;
+    width: 1000px;
+    height: 500px;
+    margin-left: 300px;
+    line-height: 30px;
+    margin-top: 100px;
+}
+
+.about{
+    margin-top: 50px;
+    width: 400px;
+}
+.myname{
+    color: rgb(216, 164, 87);
+}
+
+.contact_btn{
+    margin-top: 20px;
+    color:  rgb(216, 164, 87);
+    background-color: rgb(75, 73, 73) ;
+    border-radius: 5px;
+    border-color:  rgb(216, 164, 87);
+    border-style: solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 8px;
+    padding-left: 8px;
+
+}
+
+.myimage_cont{
+    translate: 400px;
+    width: 800px;
+    height: 400px;
+}
+
+.myimage{
+   object-fit: cover;
+   width: 400px;
+   height: 400px;
+}
+
+.social_handles{
+    translate: 400px;
+}
+
+.solid_line{
+    border-top: 2px solid  rgb(216, 164, 87);
+    width: 400px;
+}
+.linenameabout{
+    display: flex;
+}
+
+.aboutsection{
+    margin-left: 100px;
+    width: 1600px;
+}
