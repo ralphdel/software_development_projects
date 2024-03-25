@@ -1,0 +1,96 @@
+This is also using form in react but here all the inputs will be collected as objects 
+
+
+
+
+import { useState } from "react";
+
+const Form = () => {
+  const [inputs, setInputs] = useState({ name: "", email: "", password: "" });
+  const [entries, setEntries] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const Handleinputs = (e) => {
+    setInputs({
+      ...inputs,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const errorMessage =
+      !inputs.name ? "Name field cannot be empty" :
+      !inputs.email ? "Email field cannot be empty" :
+      !inputs.password ? "Password field cannot be empty" :
+      "";
+
+    setErrorMessage(errorMessage);
+
+    if (!errorMessage) {
+      console.log(`Name: ${inputs.name} Email: ${inputs.email} Password: ${inputs.password}`);
+      setEntries([
+        ...entries,
+        {
+          Username: inputs.name,
+          Useremail: inputs.email,
+          Userpassword: inputs.password
+        }
+      ]);
+      // Clear input fields after submission
+      setInputs({ name: "", email: "", password: "" });
+    }
+  };
+
+  return (
+    <>
+      <h2>Form is ready</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor=""> Name </label>
+          <input
+            type="text"
+            name="name"
+            placeholder="type name here "
+            value={inputs.name}
+            onChange={Handleinputs}
+          />
+        </div>
+        <div>
+          <label htmlFor=""> Email </label>
+          <input
+            type="text"
+            name="email"
+            placeholder="enter your email address"
+            value={inputs.email}
+            onChange={Handleinputs}
+          />
+        </div>
+        <div>
+          <label htmlFor="">Password </label>
+          <input
+            type="text"
+            name="password"
+            placeholder="type password here"
+            value={inputs.password}
+            onChange={Handleinputs}
+          />
+        </div>
+
+        <button type="submit"> SUBMIT</button>
+      </form>
+      {errorMessage ? <p style={{ color: "red" }}>{errorMessage}</p> : null}
+      <div>
+        {entries.map((entry, index) => (
+          <div key={index}>
+            <p>Name: {entry.Username}</p>
+            <p>Email: {entry.Useremail}</p>
+            <p>Password: {entry.Userpassword}</p>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default Form;
